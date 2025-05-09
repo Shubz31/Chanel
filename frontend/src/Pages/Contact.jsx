@@ -10,7 +10,7 @@ const Contact = () => {
       </div>
 
       <div className='flex flex-col justify-center gap-10 my-10 md:flex-row mb-28'>
-        <img className='w-full md:max-w-[450px] max-h-[700px] object-cover rounded-md' src={assets.contact_us_1} alt="" />
+        <img className='w-full md:max-w-[450px] max-h-[600px] object-cover rounded-md' src={assets.contact_us_1} alt="" />
         <div className='flex flex-col items-start justify-center gap-6'>
           <p className='text-xl font-semibold text-gray-600'>Our Store</p>
           <p className='text-gray-500'>Shop no.911 Pheonix Mall <br/> Viman Nagar, Pune, India</p>
