@@ -4,10 +4,11 @@ import { ShopContext } from '../Context/ShopContext';
 import { assets } from '../assets/assets';
 import RelatedProducts from '../Components/RelatedProducts';
 
+
 const Product = () => {
 
   const { productId } = useParams();
-  const { products, currency } = useContext(ShopContext);
+  const { products, currency, addToCart } = useContext(ShopContext);
   const [productData, setProductData] = useState(false);
   const [image, setImage] = useState('')
   const [size, setSize] = useState('')
@@ -17,7 +18,6 @@ const Product = () => {
       if (item._id === productId) {
         setProductData(item);
         setImage(item.image[0])
-        console.log(item);
         return null;
       }
     })
@@ -64,7 +64,7 @@ const Product = () => {
               }
             </div>
           </div>
-          <button className='px-8 py-3 text-sm text-white bg-black active:bg-gray-700'>ADD TO CART</button>
+          <button onClick={() => addToCart(productData._id, size)} className='px-8 py-3 text-sm text-white bg-black active:bg-gray-700'>ADD TO CART</button>
           <hr className='mt-8 sm:w-4/5' />
           <div className='flex flex-col gap-1 mt-5 text-sm text-gray-700'>
             <p>100% Original Product.</p>
@@ -84,7 +84,7 @@ const Product = () => {
           <p>E-commerce websites typically display products or services along with detailed descriptions, images, prices and any available variations(eg. sizes,colors). Each product usually has its own dedicated page with relevant information.</p>
         </div>
       </div>
-      <RelatedProducts category={productData.category} subcategory={productData.subcategory} />
+      <RelatedProducts category={productData.category} subCategory={productData.subCategory} />
     </div>
   ) : <div className='opacity-0'></div>
 }

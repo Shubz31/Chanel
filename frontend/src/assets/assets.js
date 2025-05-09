@@ -298,10 +298,15 @@ import support_img from './support_img.png'
 import cross_icon from './cross_icon.png'
 import star_icon from './star_icon.png'
 import star_dull_icon from './star_dull_icon.png'
+import bin_icon from './bin_icon.png'
+import stripe_logo from './stripe_logo.png'
+import razorpay_logo from './razorpay_logo.png'
+
  
 export const assets = {
     logo,
     menu_icon,
+    bin_icon,
     star_icon,
     star_dull_icon,
     cross_icon,
@@ -322,7 +327,9 @@ export const assets = {
     pay_pal,
     visa_icon,
     sign_in_icon,
-    search_icon
+    search_icon,
+    razorpay_logo,
+    stripe_logo
 }
 
 export const products = [
